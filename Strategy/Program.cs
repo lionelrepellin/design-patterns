@@ -4,6 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/* 
+ * Le patron de conception stratégie est utile pour des situations où il est nécessaire 
+ * de permuter dynamiquement les algorithmes utilisés dans une application.
+ */
 namespace Strategy
 {
     class Program

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Composite
 {
-    public class SoftwareEngineer : Employee
+    public class WebIntegrator : Employee
     {
-        public SoftwareEngineer(string name, int level)
+        public WebIntegrator(string name, int level)
             : base(name, level)
         {
         }

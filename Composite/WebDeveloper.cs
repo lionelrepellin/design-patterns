@@ -10,7 +10,7 @@ namespace Composite
     {
         public WebDeveloper(string name, int level)
             : base(name, level)
-        {            
+        {
         }
     }
 }

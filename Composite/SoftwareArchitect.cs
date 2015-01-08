@@ -10,7 +10,7 @@ namespace Composite
     {
         public SoftwareArchitect(string name, int level)
             : base(name, level)
-        {            
+        {
         }
     }
 }

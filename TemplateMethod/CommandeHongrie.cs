@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TemplateMethod
 {
-    public class CommandeLuxembourg : Commande
+    public class CommandeHongrie : Commande
     {
         protected override void CalculTVA()
         {
-            this.montantTVA = this.montantHT * 0.17;
+            this.montantTVA = this.montantHT * 0.27;
         }
     }
 }

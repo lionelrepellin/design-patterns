@@ -31,9 +31,10 @@ namespace TemplateMethod
 
         public void Affiche()
         {
-            Console.WriteLine("Commande");
+            Console.WriteLine("[{0}]", this.GetType().FullName);
             Console.WriteLine("Montant HT: {0} Euros", this.montantHT);
             Console.WriteLine("Montant TTC: {0} Euros", this.montantTTC);
+            Console.WriteLine();
         }
     }
 }
