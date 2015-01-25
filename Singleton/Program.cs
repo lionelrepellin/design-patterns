@@ -27,15 +27,15 @@ namespace Singleton
             {
                 var t = new Thread(new ThreadStart(CreateSingleton));
                 t.Start();
-                threads.Add(t);                
+                threads.Add(t);
             }
 
             // attends tous les threads (retour au mode synchrone)
             foreach (var t in threads)
-            {                
+            {
                 t.Join();
             }
-            
+
             // récupère tous les noms qui ont été ajoutés et les affiche
             var list = instance.GetAll();
             foreach (var name in list)
