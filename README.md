@@ -1,4 +1,2 @@
-design-patterns
-===============
+## Contents
 
-Just some design patterns written in C#

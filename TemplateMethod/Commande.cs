@@ -8,9 +8,9 @@ namespace TemplateMethod
 {
     public abstract class Commande
     {
-        protected double montantHT;
-        protected double montantTVA;
-        protected double montantTTC;
+        protected double MontantHT;
+        protected double MontantTVA;
+        protected double MontantTTC;
 
         /// <summary>
         /// Méthode spécialisée dans les classes
@@ -20,20 +20,20 @@ namespace TemplateMethod
 
         public void CalculTTC()
         {
-            this.CalculTVA();
-            this.montantTTC = this.montantHT + this.montantTVA;
+            CalculTVA();
+            MontantTTC = MontantHT + MontantTVA;
         }
 
         public void SetMontantHT(double montantHT)
         {
-            this.montantHT = montantHT;
+            MontantHT = montantHT;
         }
 
         public void Affiche()
         {
             Console.WriteLine("[{0}]", this.GetType().FullName);
-            Console.WriteLine("Montant HT: {0} Euros", this.montantHT);
-            Console.WriteLine("Montant TTC: {0} Euros", this.montantTTC);
+            Console.WriteLine("Montant HT: {0} Euros", MontantHT);
+            Console.WriteLine("Montant TTC: {0} Euros", MontantTTC);
             Console.WriteLine();
         }
     }

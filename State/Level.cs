@@ -11,8 +11,8 @@ namespace State
     /// </summary>
     public abstract class Level
     {
-        protected double lowLimit;
-        protected double highLimit;
+        protected double LowLimit;
+        protected double HighLimit;
 
         // Properties
         public CounterStrike CS { get; set; }

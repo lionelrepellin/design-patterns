@@ -8,17 +8,17 @@ namespace Proxy
 {
     public class Anemometer
     {
-        private int windSpeed;
-        private const int windSpeedLimit = 35;
+        private int _windSpeed;
+        private const int _windSpeedLimit = 35;
 
         public Anemometer(int speed)
         {
-            this.windSpeed = speed;
+            _windSpeed = speed;
         }
 
         public bool IsWindSpeedAcceptable()
         {
-            return windSpeed <= windSpeedLimit;
+            return _windSpeed <= _windSpeedLimit;
         }
     }
 }

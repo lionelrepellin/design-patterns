@@ -10,16 +10,16 @@ namespace Builder
     {
         static void Main(string[] args)
         {
-            var serveur = new Serveur();
+            var waiter = new Waiter();
             
-            var cuisinierBigMac = new CuisinierBigMac();
-            var cuisinierCheeseBurger = new CuisinierCheeseBurger();
+            var cookBigMac = new CookBigMac();
+            var cookCheeseBurger = new CookCheeseBurger();
 
-            serveur.ChoisirCuisinier(cuisinierBigMac);
-            //serveur.ChoisirCuisinier(cuisinierCheeseBurger);
-            serveur.LancerLaPreparation();
+            waiter.ChooseCook(cookBigMac);
+            //waiter.ChooseCook(cookCheeseBurger);
+            waiter.GiveTheOrderToStart();
 
-            var hamburger = serveur.DonnerHamburger();
+            var hamburger = waiter.GiveToTheCustomer();
 
             Console.WriteLine(hamburger);
             Console.Read();

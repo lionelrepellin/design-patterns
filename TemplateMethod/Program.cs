@@ -14,33 +14,38 @@ namespace TemplateMethod
     {
         static void Main(string[] args)
         {
-            var montant = 100;
+            // montant HT
+            var amountDutyFree = 100;
 
-            var cmdeFrance = new CommandeFrance();
-            cmdeFrance.SetMontantHT(montant);
-            cmdeFrance.CalculTTC();
-            cmdeFrance.Affiche();
+            var orderFromFrance = new OrderFromFrance();
+            orderFromFrance.AmountDutyFree(amountDutyFree);
 
-            Console.WriteLine("--------------------\r\n");
+            // calcul le montant TTC en fonction de la TVA du pays
+            orderFromFrance.AllTaxesIncludedCalculation();
 
-            var cmdeLux = new CommandeLuxembourg();
-            cmdeLux.SetMontantHT(montant);
-            cmdeLux.CalculTTC();
-            cmdeLux.Affiche();
+            // affiche le résultat
+            orderFromFrance.Display();
 
             Console.WriteLine("--------------------\r\n");
 
-            var cmdeMalte = new CommandeMalte();
-            cmdeMalte.SetMontantHT(montant);
-            cmdeMalte.CalculTTC();
-            cmdeMalte.Affiche();
+            var orderFromLux = new OrderFromLuxembourg();
+            orderFromLux.AmountDutyFree(amountDutyFree);
+            orderFromLux.AllTaxesIncludedCalculation();
+            orderFromLux.Display();
 
             Console.WriteLine("--------------------\r\n");
 
-            var cmdeHongrie = new CommandeHongrie();
-            cmdeHongrie.SetMontantHT(montant);
-            cmdeHongrie.CalculTTC();
-            cmdeHongrie.Affiche();
+            var orderFromMalte = new OrderFromMalte();
+            orderFromMalte.AmountDutyFree(amountDutyFree);
+            orderFromMalte.AllTaxesIncludedCalculation();
+            orderFromMalte.Display();
+
+            Console.WriteLine("--------------------\r\n");
+
+            var orderFromHongrie = new OrderFromHongrie();
+            orderFromHongrie.AmountDutyFree(amountDutyFree);
+            orderFromHongrie.AllTaxesIncludedCalculation();
+            orderFromHongrie.Display();
 
             Console.Read();
         }

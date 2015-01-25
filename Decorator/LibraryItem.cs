@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Decorator
+{
+    /// <summary>
+    /// The 'Component' abstract class
+    /// </summary>
+    public abstract class LibraryItem
+    {
+        public int NumCopies { get; set; }
+        public abstract void Display();
+    }
+}

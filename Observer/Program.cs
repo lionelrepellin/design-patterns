@@ -23,6 +23,7 @@ namespace Observer
 
             // le changement de statut va déclencher 
             // automatiquement la notification
+            Console.WriteLine("Changement de statut: 'Disconnected'");
             me.Status = "Disconnected";
 
             Console.Read();

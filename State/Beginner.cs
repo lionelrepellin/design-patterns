@@ -17,13 +17,13 @@ namespace State
 
         private void Initialize()
         {
-            lowLimit = 0;
-            highLimit = 100;
+            this.LowLimit = 0;
+            this.HighLimit = 100;
         }
 
         public override void WinPoints(int points)
         {
-            CurrentPoints += points;
+            this.CurrentPoints += points;
             CheckLevel();
         }
 
@@ -34,9 +34,9 @@ namespace State
 
         private void CheckLevel()
         {
-            if (CurrentPoints > highLimit)
+            if (this.CurrentPoints > this.HighLimit)
             {
-                CS.Skill = new Intermediate(this);
+                this.CS.Skill = new Intermediate(this);
             }
         }
     }

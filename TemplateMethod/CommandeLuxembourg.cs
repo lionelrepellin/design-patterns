@@ -10,7 +10,7 @@ namespace TemplateMethod
     {
         protected override void CalculTVA()
         {
-            this.montantTVA = this.montantHT * 0.17;
+            this.MontantTVA = this.MontantHT * 0.17;
         }
     }
 }

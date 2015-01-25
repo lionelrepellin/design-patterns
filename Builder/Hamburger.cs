@@ -8,44 +8,44 @@ namespace Builder
 {
     public class Hamburger
     {
-        private int nbSteackHachés;
-        private int nbTrancheFromage;
-        private bool sauce;
-        private bool salade;
-        private bool cornichon;
+        private int _nbSteack;
+        private int _nbSliceOfCheese;
+        private bool _sauce;
+        private bool _salad;
+        private bool _gherkin;
 
-        public void NbSteackHaché(int nbSteackHachés)
+        public void Steak(int nbSteack)
         {
-            this.nbSteackHachés = nbSteackHachés;
+            _nbSteack = nbSteack;
         }
 
-        public void NbTrancheFromage(int nbTrancheFromage)
+        public void SliceOfCheese(int nbSliceOfCheese)
         {
-            this.nbTrancheFromage = nbTrancheFromage;
+            _nbSliceOfCheese = nbSliceOfCheese;
         }
 
         public void Sauce(bool sauce)
         {
-            this.sauce = sauce;
+            _sauce = sauce;
         }
 
-        public void Salade(bool salade)
+        public void Salad(bool salad)
         {
-            this.salade = salade;
+            _salad = salad;
         }
 
-        public void Cornichon(bool cornichon)
+        public void Gherkin(bool gherkin)
         {
-            this.cornichon = cornichon;
+            _gherkin = gherkin;
         }
 
         public override string ToString()
         {
-            var sauceExists = (this.sauce) ? "avec de la sauce" : "sans sauce";
-            var saladeExists = (this.salade) ? "avec de la salade" : "sans salade";
-            var cornichonExists = (this.cornichon) ? "avec une tranche de cornichon" : "sans cornichon";
+            var sauceExists = (_sauce) ? "avec de la sauce" : "sans sauce";
+            var saladExists = (_salad) ? "avec de la salade" : "sans salade";
+            var gherkinExists = (_gherkin) ? "avec une tranche de cornichon" : "sans cornichon";
 
-            return string.Format("Le burger est constitué de {0} steack(s) haché(s), avec {1} tranche(s) de fromage, {2}, {3} et {4}.", this.nbSteackHachés, this.nbTrancheFromage, sauceExists, saladeExists, cornichonExists);
+            return string.Format("Le burger est constitué de {0} steack(s), avec {1} tranche(s) de fromage, {2}, {3} et {4}.", _nbSteack, _nbSliceOfCheese, sauceExists, saladExists, gherkinExists);
         }
     }
 }

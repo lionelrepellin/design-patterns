@@ -8,11 +8,11 @@ namespace ChainOfResponsability
 {
     public abstract class Popup
     {
-        protected Popup successor;
+        protected Popup Successor;
 
         public void SetSuccessor(Popup successor)
         {
-            this.successor = successor;
+            Successor = successor;
         }
         
         public abstract void ProcessRequest();

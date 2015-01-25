@@ -10,137 +10,105 @@ namespace Decorator
     {
         static void Main(string[] args)
         {
-            /*
-            // On crée un chevalier
-            Humain chevalier = new Homme();
-            Console.WriteLine(chevalier.Description + ", poids : " + chevalier.Poids() + " kg ");
-
-            // On crée une princesse
-            Humain princesse = new Femme();
-            Console.WriteLine(princesse.Description + ", poids : " + princesse.Poids() + " kg ");
-
-            // Le chevalier va mettre son armure (Il va se " décorer »)
-            chevalier = new Armure(chevalier);
-            Console.WriteLine(chevalier.Description + ", poids : " + chevalier.Poids() + " kg ");
-
-            // La princesse va mettre son chapeau (Elle va se " décorer »)
-            princesse = new Chapeau(princesse);
-            Console.WriteLine(princesse.Description + ", poids : " + princesse.Poids() + " kg ");
-
-            // La princesse (Qui vient de mettre son chapeau) va maintenant mettre son armure !
-            // C’est une princesse – Chevalier !
-            princesse = new Armure(princesse);
-            Console.WriteLine(princesse.Description + ", poids : " + princesse.Poids() + " kg ");
-            */
+            //var book = new Book("John Coffee", "My Life", 1);
+            //var borrower = new Borrower("Bob", 12);
             
-            var book = new Book("John Coffee", "My Life", 1);
-            var borrower = new Borrower
-            {
-                Name = "Bob",
-                Age = 12
-            };
+            //var borowable = new Borrowable(book);
 
-            var borowable = new Borrowable(book);
+            //borowable.BorrowItem(borrower);
+            //borowable.Display();
+            //borowable.ReturnItem(borrower);
+            //borowable.Display();
 
-            borowable.BorrowItem(borrower);
-            borowable.Display();
-            borowable.ReturnItem(borrower);
-            borowable.Display();
- 
+            Glace maglace = new GlaceItalienne();
+            maglace = new GoutChocolat(maglace);
+            maglace = new GoutVanille(maglace);
+            Console.WriteLine(maglace.Description);
+            Console.ReadKey(); 
+
             Console.Read();
         }
     }
 
-    public abstract class Humain
+    public abstract class Glace
     {
-        public abstract string Description { get; }
-        public abstract double Poids();
+        public virtual string Description
+        {
+            get
+            {
+                return "Glace virtuelle";
+            }
+        }
     }
 
-    public class Homme : Humain
+    public class GlaceItalienne : Glace
     {
-        // On réécrit la méthode poids du parent
-        public override double Poids()
-        {
-            // Poids moyen d'un homme
-            return 75.0;
-        }
-
-        // On réécrit la méthode poids du parent
         public override string Description
         {
-            // Description d'un homme
-            get { return "Un homme"; }
+            get
+            {
+                return "glace italienne";
+            }
         }
     }
 
-    public class Femme : Humain
+    public class GlaceALeau : Glace
     {
-        // On réécrit la méthode poids du parent
-        public override double Poids()
-        {
-            // Poids moyen d'une femme
-            return 60.0;
-        }
-
-        // On réécrit la méthode poids du parent
         public override string Description
         {
-            // Description d'une femme
-            get { return "Une femme"; }
+            get
+            {
+                return "glace a l'eau";
+            }
         }
     }
 
-    public abstract class DecorateurHumain : Humain
+    public abstract class GlaceDecorator : Glace
     {
-        public override double Poids()
-        {
-            return -1;
-        }
+        protected Glace _glace;
 
         public override string Description
         {
-            get { return "Un décorateur Abstrait..."; }
+            get
+            {
+                return _glace.Description;
+            }
         }
+
     }
 
-    public class Armure : DecorateurHumain
+    public class GoutChocolat : GlaceDecorator
     {
-        private Humain humain;
-
-        public Armure(Humain humain)
+        public GoutChocolat(Glace glace)
         {
-            this.humain = humain;
-        }
-
-        public override double Poids()
-        {
-            return 12.0 + humain.Poids();
+            _glace = glace;
         }
 
         public override string Description
         {
-            get { return humain.Description + " et son armure"; }
+            get
+            {
+                return _glace.Description + " avec du chocolat ";
+            }
         }
+
     }
 
-    public class Chapeau : DecorateurHumain
+    public class GoutVanille : GlaceDecorator
     {
-        private Humain humain;
 
-        public Chapeau(Humain humain)
+        public GoutVanille(Glace glace)
         {
-            this.humain = humain;
-        }
-
-        public override double Poids()
-        {
-            return 0.30 + humain.Poids();
+            _glace = glace;
         }
 
         public override string Description
         {
-            get { return humain.Description + " et son chapeau"; }
+
+            get
+            {
+                return _glace.Description + " avec de la vanille ";
+            }
         }
     }
 }

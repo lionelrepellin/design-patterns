@@ -17,27 +17,27 @@ namespace State
 
         private void Initialize()
         {
-            lowLimit = 200;
-            highLimit = 300;
+            this.LowLimit = 200;
+            this.HighLimit = 300;
         }
 
         public override void WinPoints(int points)
         {
-            CurrentPoints += points;
+            this.CurrentPoints += points;
             CheckLevel();
         }
 
         public override void LoosePoints(int points)
         {
-            CurrentPoints -= points;
+            this.CurrentPoints -= points;
             CheckLevel();
         }
 
         private void CheckLevel()
         {
-            if (CurrentPoints < lowLimit)
+            if (this.CurrentPoints < this.LowLimit)
             {
-                CS.Skill = new Intermediate(this);
+                this.CS.Skill = new Intermediate(this);
             }            
         }
     }

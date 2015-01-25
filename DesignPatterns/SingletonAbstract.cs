@@ -8,22 +8,22 @@ namespace Singleton
 {
     public abstract class SingletonAbstract
     {
-        protected List<string> names;
+        protected List<string> Names;
 
         public SingletonAbstract()
         {
-            names = new List<string>();
+            Names = new List<string>();
             Console.WriteLine("--> Initialisation de la liste");
         }
 
         public void Add(string name)
         {
-            this.names.Add(name);            
+            Names.Add(name);            
         }
 
         public List<string> GetAll()
         {
-            return this.names;
+            return Names;
         }
     }
 }

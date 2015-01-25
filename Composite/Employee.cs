@@ -8,19 +8,19 @@ namespace Composite
 {
     public abstract class Employee
     {
-        private string name;
-        private int hierarchyLevel;
+        private string _name;
+        private int _hierarchyLevel;
 
         public Employee(string name, int level)
         {
-            this.name = name;
-            this.hierarchyLevel = level;
+            _name = name;
+            _hierarchyLevel = level;
         }
 
         public virtual string Display()
         {
-            var result = string.Format("{0} ({1})", this.name, this.GetType().Name);
-            return result.PadLeft(3 * this.hierarchyLevel + result.Length);
+            var result = string.Format("{0} ({1})", _name, this.GetType().Name);
+            return result.PadLeft(3 * _hierarchyLevel + result.Length);
         }
     }
 }

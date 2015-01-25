@@ -15,11 +15,11 @@ namespace Strategy
         /// <summary>
         /// Modifier la valeur pour changer de stratégie
         /// </summary>
-        private static bool isUserAuthenticated = true;
+        private static bool _isUserAuthenticated = true;
 
         static void Main(string[] args)
         {
-            var strategy = CreateBackupStrategy(isUserAuthenticated);
+            var strategy = CreateBackupStrategy(_isUserAuthenticated);
 
             var service = new BackupService(strategy);
             service.Load();

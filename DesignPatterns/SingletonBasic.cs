@@ -8,7 +8,7 @@ namespace Singleton
 {
     public class SingletonBasic : SingletonAbstract
     {
-        private static SingletonBasic singleton = null;
+        private static SingletonBasic _singleton = null;
 
         private SingletonBasic()
             : base()
@@ -20,12 +20,12 @@ namespace Singleton
         {
             get
             {
-                if (singleton == null)
+                if (_singleton == null)
                 {
-                    singleton = new SingletonBasic();
+                    _singleton = new SingletonBasic();
                     Console.WriteLine("Création de l'instance");
                 }
-                return singleton;
+                return _singleton;
             }
         }
     }
