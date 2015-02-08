@@ -11,14 +11,31 @@ namespace Builder
         static void Main(string[] args)
         {
             var waiter = new Waiter();
-            
-            var cookBigMac = new CookBigMac();
-            var cookCheeseBurger = new CookCheeseBurger();
 
-            waiter.ChooseCook(cookBigMac);
-            //waiter.ChooseCook(cookCheeseBurger);
+            // change value to see a different result
+            var test = 1; // 2, 3
+
+            switch (test)
+            {
+                case 1:
+                    var cookBigMac = new CookBigMac();
+                    waiter.ChooseCook(cookBigMac);
+                    break;
+
+                case 2:
+                    var cookCheeseBurger = new CookCheeseBurger();
+                    waiter.ChooseCook(cookCheeseBurger);
+                    break;
+                case 3:
+                    var myBurger = new MyBurger();
+                    waiter.ChooseCook(myBurger);
+                    break;
+            }
+
+            // launch the manufacturing
             waiter.GiveTheOrderToStart();
 
+            // the waiter give the burger to the customer
             var hamburger = waiter.GiveToTheCustomer();
 
             Console.WriteLine(hamburger);

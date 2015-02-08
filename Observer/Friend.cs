@@ -17,7 +17,7 @@ namespace Observer
 
         public void Update(User user)
         {
-            Console.WriteLine("{0} a été notifié que le nouveau statut de {1} est '{2}'", _name, user.Name, user.Status);
+            Console.WriteLine("{0} has been notified - {1}'s status is now '{2}'", _name, user.Name, user.Status);
         }
     }
 }

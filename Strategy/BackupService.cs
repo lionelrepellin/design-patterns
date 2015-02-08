@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    /// <summary>
-    /// Le service de sauvegarde. La comportement de la sauvegarde
-    /// sera différent en fonction de la stratégie définit.
-    /// </summary>
+    // the behaviour depends of the strategy used
     public class BackupService
     {
         private IBackupStrategy _strategy;

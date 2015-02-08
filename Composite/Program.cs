@@ -26,7 +26,7 @@ namespace Composite
             var architect = new SoftwareArchitect("Bruno", 3);
             var dev1 = new WebDeveloper("Benoît", 3);
 
-            #region Autres membres de l'équipe
+            #region other team members
             var dev2 = new WebDeveloper("Christophe", 3);
             var dev3 = new WebDeveloper("Gauthier", 3);
             var dev4 = new WebDeveloper("Raphaëlle", 3);
@@ -41,6 +41,7 @@ namespace Composite
 
             Console.WriteLine(boss.Display());
 
+            // display only manager 4 and these employees
             //Console.WriteLine("--------------------------------------");
             //Console.WriteLine(manager4.Display());
 

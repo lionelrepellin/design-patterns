@@ -45,6 +45,7 @@
     <Compile Include="CookBigMac.cs" />
     <Compile Include="CookCheeseBurger.cs" />
     <Compile Include="Hamburger.cs" />
+    <Compile Include="MyBurger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Waiter.cs" />

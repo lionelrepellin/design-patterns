@@ -10,20 +10,21 @@ namespace Observer
     {
         static void Main(string[] args)
         {
+            // initialize the status
             var me = new User("Lionel", "Online");
 
+            // add friends to notify
             me.Add(new Friend("Jimmy"));
             me.Add(new Friend("Bruno"));
             me.Add(new Friend("Vincent"));
 
-            // affiche le statut actuel
+            // show the current status
             me.Show();
 
             Console.WriteLine();
 
-            // le changement de statut va déclencher 
-            // automatiquement la notification
-            Console.WriteLine("Changement de statut: 'Disconnected'");
+            // the status change will trigger the notification
+            Console.WriteLine("New status is: 'Disconnected'");
             me.Status = "Disconnected";
 
             Console.Read();

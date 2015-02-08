@@ -29,7 +29,7 @@ namespace ChainOfResponsability
             }
             else
             {
-                Console.WriteLine("Go to order page");
+                Console.WriteLine("Go to 'My Account'");
             }
         }
     }

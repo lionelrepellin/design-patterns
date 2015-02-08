@@ -16,6 +16,17 @@ Design Patterns
 
 ## Documentation
 
+These are just some design patterns. I have tried to illustrate them with real life examples like :
+
+  - **Builder** : a waiter gives orders to the cook for making a burger
+  - **Proxy** : adds a controller of wind speed to up or down the rolling shutters
+  - **Singleton thread-safe** : saves content into a file in a multithreaded environment
+  - **State** : illustrates the skill level who changes when you kill enemies on Counter Strike
+  - **Strategy** : the behaviour of the backup service is changing depending on the strategy used
+  - ...
+
+You can see the links below to learn more about design patterns :
+
 - [Builder](http://en.wikipedia.org/wiki/Builder_pattern)
 - [Chain of Responsability](http://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 - [Composite](http://en.wikipedia.org/wiki/Composite_pattern)
@@ -29,7 +40,7 @@ Design Patterns
 
 ## Next step
 
-- Add all remaining design patterns
+- Add all remaining design patterns (when I will have some time)
 
 ## Creator
 

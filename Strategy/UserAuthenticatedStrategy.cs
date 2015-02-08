@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    /// <summary>
-    /// Utilisateur authentifié
-    /// </summary>
+    // user is authenticated
     public class UserAuthenticatedStrategy : IBackupStrategy
     {
-        public void Save()
-        {
-            Console.WriteLine("[{0}] on sauvegarde en base de données", this.GetType().Name);
+        public object Load()
+        {            
+            Console.WriteLine("[{0}] Load data from the database", this.GetType().Name);
+            return new object();
         }
 
-        public object Load()
+        public void Save()
         {
-            Console.WriteLine("[{0}] on charge les données depuis la base de données", this.GetType().Name);
-            return new object();
+            Console.WriteLine("[{0}] Save data into the database", this.GetType().Name);
         }
     }
 }

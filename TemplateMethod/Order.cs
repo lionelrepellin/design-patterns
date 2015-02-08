@@ -8,41 +8,39 @@ namespace TemplateMethod
 {
     public abstract class Order
     {
-        protected double DutyFree;
-        protected double TaxeAmount;
-        protected double TaxesIncluded;
+        // HT in French
+        protected double ExcludingTaxes; // ET
 
-        /// <summary>
-        /// Méthode spécialisée dans les classes
-        /// qui héritent de Commande
-        /// </summary>
+        // TVA in French
+        protected double Vat; // VAT
+
+        // TTC in French
+        protected double AllTaxesIncluded; // ATI
+
+        // this method is specialized into classes who inherits from this class
         protected abstract void VatCalculation();
-
-        /// <summary>
-        /// La méthode de calcul est identique pour 
-        /// tous les pays, seul le montant de la TVA
-        /// propre à chacun donne un montant TTC différent
-        /// </summary>
+                
+        // method calculation is the same for each country
+        // only the amount of VAT of each country gives a different ATI amount
         public void AllTaxesIncludedCalculation()
         {
-            // le montant de la TVA (TaxeAmount) est
-            // calculé dans les classes concrètes
+            // the VAT amount is calculated in each concrete class
             VatCalculation();
             
-            // TTC = HT + TVA
-            TaxesIncluded = DutyFree + TaxeAmount;
+            // ATI = ET + VAT
+            AllTaxesIncluded = ExcludingTaxes + Vat;
         }
 
-        public void AmountDutyFree(double amountDutyFree)
+        public void ExcludingTaxesAmount(double excludingTaxes)
         {
-            DutyFree = amountDutyFree;
+            ExcludingTaxes = excludingTaxes;
         }
 
         public void Display()
         {
             Console.WriteLine("[{0}]", this.GetType().FullName);
-            Console.WriteLine("Montant HT: {0} Euros", DutyFree);
-            Console.WriteLine("Montant TTC: {0} Euros", TaxesIncluded);
+            Console.WriteLine("Excluding taxes amount: {0} Euros", ExcludingTaxes);
+            Console.WriteLine("All taxes included amount: {0} Euros", AllTaxesIncluded);
             Console.WriteLine();
         }
     }

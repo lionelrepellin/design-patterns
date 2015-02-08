@@ -43,9 +43,9 @@
   <ItemGroup>
     <Compile Include="Order.cs" />
     <Compile Include="OrderFromFrance.cs" />
-    <Compile Include="OrderFromHongrie.cs" />
+    <Compile Include="OrderFromHungary.cs" />
     <Compile Include="OrderFromLuxembourg.cs" />
-    <Compile Include="OrderFromMalte.cs" />
+    <Compile Include="OrderFromMalta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

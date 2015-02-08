@@ -10,12 +10,12 @@ namespace Proxy
     {
         public void Up()
         {
-            Console.WriteLine("Je monte les volets...");
+            Console.WriteLine("I go up the rolling shutters.");
         }
 
         public void Down()
         {
-            Console.WriteLine("Je descends les volets...");
+            Console.WriteLine("I go down the rolling shutters.");
         }
     }
 }

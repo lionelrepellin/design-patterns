@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    /// <summary>
-    /// Les méthodes Save et Load seront utilisées, 
-    /// peu importe la stratégie employée
-    /// </summary>
+    // the Load() and Save() methods will be used
+    // regardless of the strategy
     public interface IBackupStrategy
     {
         object Load();

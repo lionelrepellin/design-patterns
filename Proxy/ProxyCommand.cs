@@ -9,8 +9,7 @@ namespace Proxy
     public class ProxyCommand : IRollingShuttersCommand
     {
         private Anemometer _anemometer;
-        private Command _command;
-        private string _errorMessage = "La vitesse du vent n'est pas appropriée pour cette action.";
+        private Command _command;        
 
         public ProxyCommand(Anemometer anemometer)
         {
@@ -26,7 +25,7 @@ namespace Proxy
             }
             else
             {
-                Console.WriteLine(_errorMessage);
+                Error();
             }
         }
 
@@ -38,8 +37,15 @@ namespace Proxy
             }
             else
             {
-                Console.WriteLine(_errorMessage);
+                Error();
             }
+        }
+
+        private void Error()
+        {
+            Console.WriteLine("The wind speed is not appropriate for this action.");
+            Console.WriteLine("Wind speed limit: {0} km/h", _anemometer.WindSpeedLimit);
+            Console.WriteLine("Current wind speed: {0} km/h", _anemometer.CurrentWindSpeed);            
         }
     }
 }

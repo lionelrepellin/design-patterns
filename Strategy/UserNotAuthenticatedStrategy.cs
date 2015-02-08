@@ -6,20 +6,18 @@ using System.Threading.Tasks;
 
 namespace Strategy
 {
-    /// <summary>
-    /// Utilisateur non authentifié
-    /// </summary>
+    // user is not authenticated
     public class UserNotAuthenticatedStrategy : IBackupStrategy
     {
-        public void Save()
-        {
-            Console.WriteLine("[{0}] on sauvegarde dans un fichier XML", this.GetType().Name);
-        }
-
         public object Load()
         {
-            Console.WriteLine("[{0}] on lit les données depuis un fichier XML", this.GetType().Name);
+            Console.WriteLine("[{0}] Load data from an XML file", this.GetType().Name);
             return new object();
+        }
+
+        public void Save()
+        {
+            Console.WriteLine("[{0}] Save data into an XML file", this.GetType().Name);
         }
     }
 }

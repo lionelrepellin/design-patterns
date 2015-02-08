@@ -36,7 +36,7 @@ namespace Observer
 
         public void Show()
         {
-            Console.WriteLine("Le statut de {0} est '{1}'", Name, Status);
+            Console.WriteLine("{0}'s status is '{1}'", Name, Status);
         }
 
         private void Notify()

@@ -41,11 +41,11 @@ namespace Builder
 
         public override string ToString()
         {
-            var sauceExists = (_sauce) ? "avec de la sauce" : "sans sauce";
-            var saladExists = (_salad) ? "avec de la salade" : "sans salade";
-            var gherkinExists = (_gherkin) ? "avec une tranche de cornichon" : "sans cornichon";
+            var sauceExists = (_sauce) ? "with sauce" : "without sauce";
+            var saladExists = (_salad) ? "with salad" : "without salad";
+            var gherkinExists = (_gherkin) ? "with a gherkin" : "without gherkin";
 
-            return string.Format("Le burger est constitué de {0} steack(s), avec {1} tranche(s) de fromage, {2}, {3} et {4}.", _nbSteack, _nbSliceOfCheese, sauceExists, saladExists, gherkinExists);
+            return string.Format("The burger is made with {0} steack, with {1} slice of cheese, {2}, {3} and {4}.", _nbSteack, _nbSliceOfCheese, sauceExists, saladExists, gherkinExists);
         }
     }
 }

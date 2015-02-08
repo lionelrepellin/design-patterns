@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace TemplateMethod
 {
-    public class OrderFromHongrie : Order
+    public class OrderFromMalta : Order
     {
         protected override void VatCalculation()
         {
-            this.TaxeAmount = this.DutyFree * 0.27;
+            this.Vat = this.ExcludingTaxes * 0.18;
         }
     }
 }

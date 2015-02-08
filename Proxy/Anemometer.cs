@@ -11,6 +11,22 @@ namespace Proxy
         private int _windSpeed;
         private const int _windSpeedLimit = 35;
 
+        public int WindSpeedLimit
+        {
+            get
+            {
+                return _windSpeedLimit;
+            }
+        }
+
+        public int CurrentWindSpeed
+        {
+            get
+            {
+                return _windSpeed;
+            }
+        }
+
         public Anemometer(int speed)
         {
             _windSpeed = speed;

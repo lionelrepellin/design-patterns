@@ -10,19 +10,20 @@ namespace ChainOfResponsability
     {
         static void Main(string[] args)
         {
-            // création des popups et initialisation de leur état
+            // create popups with initialized state
+            // each status can change the behaviour
             Popup exit = new Exit(true);
             Popup upload = new Upload(true);
             Popup auth = new Authentication(true);
             Popup quality = new Quality(true);
 
-            // mise en place de l'enchaînement 
+            // sets the sequence
+            // Save before Exit ? >> Upload in progress ? >> User authenticated ? >> Quality control ok ? >> Go back to "My Account"
             exit.SetSuccessor(upload);
             upload.SetSuccessor(auth);
             auth.SetSuccessor(quality);
 
-            // traite les demandes en commençant
-            // par la 1ère popup
+            // the user wants to exit the program
             exit.ProcessRequest();
 
             Console.Read();

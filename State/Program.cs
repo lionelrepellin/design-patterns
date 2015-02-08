@@ -4,9 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
- *  
- */
 namespace State
 {
     class Program
@@ -16,17 +13,16 @@ namespace State
             // Start a new game
             CounterStrike counterStrike = new CounterStrike("BlackSheep");
 
-            // Beginner
+            // BlackSheep kills enemies and wins points
+            // his status change from Beginner to Intermediate
             counterStrike.KillEnemies(1);
-
-            // Intermediate
             counterStrike.KillEnemies(2);
 
-            // Beginner
+            // when BlackSheep dies
+            // his status has gone back to Beginner
             counterStrike.HasBeenKilled();
             counterStrike.HasBeenKilled();
             
-            // Expert
             counterStrike.KillEnemies(3);
             counterStrike.KillEnemies(2);
             

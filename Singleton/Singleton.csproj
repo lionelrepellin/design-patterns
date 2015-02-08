@@ -41,11 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SingletonAbstract.cs" />
-    <Compile Include="SingletonBasic.cs" />
-    <Compile Include="SingletonThreadSafe.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
