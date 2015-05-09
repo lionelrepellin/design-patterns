@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace State
+﻿namespace State
 {
     /// <summary>
     /// The 'State' abstract class
@@ -15,7 +9,7 @@ namespace State
         protected double HighLimit;
 
         // Properties
-        public CounterStrike CS { get; set; }
+        public CounterStrike Cs { get; set; }
         public int CurrentPoints { get; set; }
 
         public abstract void WinPoints(int points);

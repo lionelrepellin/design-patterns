@@ -1,47 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace State
+﻿namespace State
 {
     public class Intermediate : Level
     {
         public Intermediate(Level level)
         {
-            this.CurrentPoints = level.CurrentPoints;
-            this.CS = level.CS;
+            CurrentPoints = level.CurrentPoints;
+            Cs = level.Cs;
             Initialize();
         }
 
         private void Initialize()
         {
-            this.LowLimit = 100;
-            this.HighLimit = 200;
+            LowLimit = 100;
+            HighLimit = 200;
         }
 
         public override void WinPoints(int points)
         {
-            this.CurrentPoints += points;
+            CurrentPoints += points;
             CheckLevel();
         }
 
         public override void LoosePoints(int points)
         {
-            this.CurrentPoints -= points;
+            CurrentPoints -= points;
             CheckLevel();
         }
 
         private void CheckLevel()
         {
-            if (this.CurrentPoints < this.LowLimit)
+            if (CurrentPoints < LowLimit)
             {
-                this.CS.Skill = new Beginner(this.CS);
+                Cs.Skill = new Beginner(Cs);
             }
-            else if (this.CurrentPoints > this.HighLimit)
+            else if (CurrentPoints > HighLimit)
             {
-                this.CS.Skill = new Expert(this);
+                Cs.Skill = new Expert(this);
             }
         }
     }

@@ -1,20 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Singleton
 {
     public class Logger
     {
         private static Logger _instance = null;
-        private static readonly object _padlock = new object();
+        private static readonly object Padlock = new object();
 
-        private string file = "SingletonThreadSafe.log";
-        private bool _executedOnce = false;
+        private const string File = "SingletonThreadSafe.log";
+        private readonly bool _executedOnce = false;
 
         private Logger()
         {
@@ -30,7 +26,7 @@ namespace Singleton
         {
             get
             {
-                lock (_padlock)
+                lock (Padlock)
                 {
                     if (_instance == null)
                     {
@@ -50,9 +46,9 @@ namespace Singleton
             Console.WriteLine(currentThreadId);
 
             // lock keyword is used to prevent thread concurrency exception
-            lock (_padlock)
+            lock (Padlock)
             {
-                using (var writer = new StreamWriter(file, true))
+                using (var writer = new StreamWriter(File, true))
                 {
                     var currentDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     writer.WriteLine(string.Concat("[" + currentDate + "] " + content, " - ", currentThreadId));

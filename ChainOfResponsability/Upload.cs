@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace ChainOfResponsability
 {
     public class Upload : Popup
     {
-        private bool _uploadInProgress;
+        private readonly bool _uploadInProgress;
 
         public Upload(bool uploadInProgress)
         {
@@ -29,7 +26,7 @@ namespace ChainOfResponsability
                 for (var i = 0; i < 20; i++)
                 {
                     Console.Write(".");
-                    System.Threading.Thread.Sleep(200);
+                    Thread.Sleep(200);
                 }
                 Console.WriteLine();
                 Successor.ProcessRequest();

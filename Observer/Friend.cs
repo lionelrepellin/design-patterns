@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Observer
 {
     public class Friend : IFriend
     {
-        private string _name;
+        private readonly string _name;
 
         public Friend(string name)
         {

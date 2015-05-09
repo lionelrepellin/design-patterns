@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proxy
 {
@@ -12,7 +8,7 @@ namespace Proxy
         {
             // change wind speed over 35 km/h
             // and you will not be able to up/down the rolling shutters
-            var windSpeed = 30;
+            const int windSpeed = 30;
             var anemometer = new Anemometer(windSpeed);
 
             var proxy = new ProxyCommand(anemometer);

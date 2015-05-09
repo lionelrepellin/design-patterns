@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace State
 {
     public class CounterStrike
     {
-        private string _playerName;
+        private readonly string _playerName;
         private const int _pointsValue = 50;
         
         public double Points

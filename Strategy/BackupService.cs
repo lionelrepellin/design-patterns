@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Strategy
+﻿namespace Strategy
 {
     // the behaviour depends of the strategy used
     public class BackupService
     {
-        private IBackupStrategy _strategy;
+        private readonly IBackupStrategy _strategy;
 
         public BackupService(IBackupStrategy strategy)
         {

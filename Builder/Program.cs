@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Builder
 {    
@@ -13,7 +9,7 @@ namespace Builder
             var waiter = new Waiter();
 
             // change value to see a different result
-            var test = 1; // 2, 3
+            const byte test = 1; // 2, 3
 
             switch (test)
             {

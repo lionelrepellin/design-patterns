@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace State
 {
@@ -10,20 +6,20 @@ namespace State
     {
         public Beginner(CounterStrike counterStrike)
         {
-            this.CurrentPoints = 0;
-            this.CS = counterStrike;
+            CurrentPoints = 0;
+            Cs = counterStrike;
             Initialize();
         }
 
         private void Initialize()
         {
-            this.LowLimit = 0;
-            this.HighLimit = 100;
+            LowLimit = 0;
+            HighLimit = 100;
         }
 
         public override void WinPoints(int points)
         {
-            this.CurrentPoints += points;
+            CurrentPoints += points;
             CheckLevel();
         }
 
@@ -34,9 +30,9 @@ namespace State
 
         private void CheckLevel()
         {
-            if (this.CurrentPoints > this.HighLimit)
+            if (CurrentPoints > HighLimit)
             {
-                this.CS.Skill = new Intermediate(this);
+                Cs.Skill = new Intermediate(this);
             }
         }
     }

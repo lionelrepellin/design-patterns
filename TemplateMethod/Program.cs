@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateMethod
 {
@@ -11,7 +7,7 @@ namespace TemplateMethod
         static void Main(string[] args)
         {
             // excluding taxes amount
-            var excludingTaxesAmount = 100;
+            const int excludingTaxesAmount = 100;
 
             var orderFromFrance = new OrderFromFrance();
             orderFromFrance.ExcludingTaxesAmount(excludingTaxesAmount);

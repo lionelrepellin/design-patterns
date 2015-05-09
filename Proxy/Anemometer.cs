@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Proxy
+﻿namespace Proxy
 {
     public class Anemometer
     {
-        private int _windSpeed;
+        private readonly int _windSpeed;
         private const int _windSpeedLimit = 35;
 
         public int WindSpeedLimit

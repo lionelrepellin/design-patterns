@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Composite
 {
     public class Manager : Employee
     {
-        private List<Employee> _employees;        
+        private readonly List<Employee> _employees;        
 
         public Manager(string name, int level)
             : base(name, level)

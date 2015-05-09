@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Proxy
 {
     public class ProxyCommand : IRollingShuttersCommand
     {
-        private Anemometer _anemometer;
-        private Command _command;        
+        private readonly Anemometer _anemometer;
+        private readonly Command _command;        
 
         public ProxyCommand(Anemometer anemometer)
         {

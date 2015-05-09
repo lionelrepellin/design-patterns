@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ChainOfResponsability
 {
     public class Exit : Popup
     {
-        private bool _wantToSave;
+        private readonly bool _wantToSave;
 
         public Exit(bool wantToSave)
         {

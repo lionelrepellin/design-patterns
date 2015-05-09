@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Observer
 {
     public class User
     {
         private string _status;
-        private List<IFriend> _friends = new List<IFriend>();
+        private readonly List<IFriend> _friends = new List<IFriend>();
 
         public string Name { get; private set; }
 

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Composite
+﻿namespace Composite
 {
     public abstract class Employee
     {
-        private string _name;
-        private int _hierarchyLevel;
+        private readonly string _name;
+        private readonly int _hierarchyLevel;
 
         public Employee(string name, int level)
         {
