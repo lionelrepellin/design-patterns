@@ -31,6 +31,7 @@ You can see the links below to learn more about design patterns :
 - [Chain of Responsability](http://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 - [Composite](http://en.wikipedia.org/wiki/Composite_pattern)
 - [Decorator](http://en.wikipedia.org/wiki/Decorator_pattern)
+- [Facade](https://en.wikipedia.org/wiki/Facade_pattern)
 - [Observer](http://en.wikipedia.org/wiki/Observer_pattern)
 - [Proxy](http://en.wikipedia.org/wiki/Proxy_pattern)
 - [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)
