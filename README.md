@@ -37,6 +37,7 @@ You can see the links below to learn more about design patterns :
 - [State](http://en.wikipedia.org/wiki/State_pattern)
 - [Strategy](http://en.wikipedia.org/wiki/Strategy_pattern)
 - [Template Method](http://en.wikipedia.org/wiki/Template_method_pattern)
+- [Facade](https://en.wikipedia.org/wiki/Facade_pattern)
 
 ## Next step
 
