@@ -9,10 +9,10 @@ namespace Singleton
         static void Main(string[] args)
         {
             var threads = new List<Thread>();
-            const int numberOfThreads = 50;
+            const int NumberOfThreads = 50;
 
             // starts all the threads
-            for (var i = 0; i < numberOfThreads; i++)
+            for (var i = 0; i < NumberOfThreads; i++)
             {
                 var thread = new Thread(new ParameterizedThreadStart(Logger.Instance.Write));
                 thread.Start(string.Format("Thread number: {0}", i));

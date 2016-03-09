@@ -5,7 +5,7 @@ namespace State
     public class CounterStrike
     {
         private readonly string _playerName;
-        private const int _pointsValue = 50;
+        private const int PointsValue = 50;
         
         public double Points
         {
@@ -26,7 +26,7 @@ namespace State
 
         public void KillEnemies(int enemies)
         {
-            var points = enemies * _pointsValue;
+            var points = enemies * PointsValue;
             Skill.WinPoints(points);
 
             var text = enemies <= 1 ? "enemy" : "enemies";
@@ -37,7 +37,7 @@ namespace State
 
         public void HasBeenKilled()
         {
-            Skill.LoosePoints(_pointsValue);
+            Skill.LoosePoints(PointsValue);
             Console.WriteLine("You have been killed: {0}pts left", Points);
             Console.WriteLine(" Skill: {0}", Skill.GetType().Name.ToUpper());
             Console.WriteLine();

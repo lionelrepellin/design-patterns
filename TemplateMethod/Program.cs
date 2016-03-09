@@ -7,10 +7,10 @@ namespace TemplateMethod
         static void Main(string[] args)
         {
             // excluding taxes amount
-            const int excludingTaxesAmount = 100;
+            const int ExcludingTaxesAmount = 100;
 
             var orderFromFrance = new OrderFromFrance();
-            orderFromFrance.ExcludingTaxesAmount(excludingTaxesAmount);
+            orderFromFrance.ExcludingTaxesAmount(ExcludingTaxesAmount);
 
             // calculates the ATI amount depending on the country
             orderFromFrance.AllTaxesIncludedCalculation();
@@ -21,21 +21,21 @@ namespace TemplateMethod
             Console.WriteLine("--------------------\r\n");
 
             var orderFromLux = new OrderFromLuxembourg();
-            orderFromLux.ExcludingTaxesAmount(excludingTaxesAmount);
+            orderFromLux.ExcludingTaxesAmount(ExcludingTaxesAmount);
             orderFromLux.AllTaxesIncludedCalculation();
             orderFromLux.Display();
 
             Console.WriteLine("--------------------\r\n");
 
             var orderFromMalte = new OrderFromMalta();
-            orderFromMalte.ExcludingTaxesAmount(excludingTaxesAmount);
+            orderFromMalte.ExcludingTaxesAmount(ExcludingTaxesAmount);
             orderFromMalte.AllTaxesIncludedCalculation();
             orderFromMalte.Display();
 
             Console.WriteLine("--------------------\r\n");
 
             var orderFromHongrie = new OrderFromHungary();
-            orderFromHongrie.ExcludingTaxesAmount(excludingTaxesAmount);
+            orderFromHongrie.ExcludingTaxesAmount(ExcludingTaxesAmount);
             orderFromHongrie.AllTaxesIncludedCalculation();
             orderFromHongrie.Display();
 

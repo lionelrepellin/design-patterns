@@ -2,14 +2,6 @@
 
 namespace Facade
 {
-    public interface ITransmissionController
-    {
-        int Gear { get; set; }
-        int MaxGear { get; set; }
-        void ShiftUp();
-        void ShiftDown();
-    }
-
     public class TransmissionController : ITransmissionController
     {
         public int Gear { get; set; }

@@ -5,7 +5,7 @@
         public Expert(Level level)
         {
             CurrentPoints = level.CurrentPoints;
-            Cs = level.Cs;
+            CounterStrike = level.CounterStrike;
             Initialize();
         }
 
@@ -31,7 +31,7 @@
         {
             if (CurrentPoints < LowLimit)
             {
-                Cs.Skill = new Intermediate(this);
+                CounterStrike.Skill = new Intermediate(this);
             }            
         }
     }

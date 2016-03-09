@@ -2,13 +2,6 @@
 
 namespace Facade
 {
-    public interface ITractionControlController
-    {
-        bool Enabled { get; set; }
-        void Enable();
-        void Disable();
-    }
-
     public class TractionControlController : ITractionControlController
     {
         public bool Enabled { get; set; }

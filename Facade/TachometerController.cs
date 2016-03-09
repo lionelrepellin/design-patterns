@@ -2,23 +2,17 @@
 
 namespace Facade
 {
-    public interface ITachometerController
-    {
-        int Rpm { get; set; }
-        int Limit { get; }
-    }
-
     public class TachometerController : ITachometerController
     {
-        private int rpm;
+        private int _rpm;
 
         public int Rpm
         {
-            get { return rpm; }
+            get { return _rpm; }
             set
             {
-                rpm = value;
-                Console.WriteLine("RPM: {0}", rpm);
+                _rpm = value;
+                Console.WriteLine("RPM: {0}", _rpm);
             }
         }
 

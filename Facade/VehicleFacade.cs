@@ -2,15 +2,6 @@
 
 namespace Facade
 {
-    public interface IVehicleFacade
-    {
-        void Start();
-        void Accelerate();
-        void SlowDown();
-        void BrakeUntilItStops();
-        void Off();
-    }
-
     public class VehicleFacade : IVehicleFacade
     {
         private readonly IEngineController _engineController;

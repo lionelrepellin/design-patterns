@@ -8,8 +8,8 @@ namespace Proxy
         {
             // change wind speed over 35 km/h
             // and you will not be able to up/down the rolling shutters
-            const int windSpeed = 30;
-            var anemometer = new Anemometer(windSpeed);
+            const int WindSpeed = 30;
+            var anemometer = new Anemometer(WindSpeed);
 
             var proxy = new ProxyCommand(anemometer);
 

@@ -9,7 +9,7 @@
         protected double HighLimit;
 
         // Properties
-        public CounterStrike Cs { get; set; }
+        public CounterStrike CounterStrike { get; set; }
         public int CurrentPoints { get; set; }
 
         public abstract void WinPoints(int points);

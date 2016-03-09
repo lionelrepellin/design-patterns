@@ -2,13 +2,6 @@
 
 namespace Facade
 {
-    public interface IEngineController
-    {
-        bool Running { get; }
-        void Start();
-        void Stop();
-    }
-
     public class EngineController : IEngineController
     {
         public bool Running { get; private set; }

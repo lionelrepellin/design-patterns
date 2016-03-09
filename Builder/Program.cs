@@ -4,29 +4,20 @@ namespace Builder
 {    
     class Program
     {
+        enum BurgerType
+        {
+            BigMac,
+            CheeseBurger,
+            Mine
+        };
+
         static void Main(string[] args)
         {
+            // change enum to see a different result
+            var cook = CreateCook(BurgerType.BigMac);
+
             var waiter = new Waiter();
-
-            // change value to see a different result
-            const byte test = 1; // 2, 3
-
-            switch (test)
-            {
-                case 1:
-                    var cookBigMac = new CookBigMac();
-                    waiter.ChooseCook(cookBigMac);
-                    break;
-
-                case 2:
-                    var cookCheeseBurger = new CookCheeseBurger();
-                    waiter.ChooseCook(cookCheeseBurger);
-                    break;
-                case 3:
-                    var myBurger = new MyBurger();
-                    waiter.ChooseCook(myBurger);
-                    break;
-            }
+            waiter.ChooseCook(cook);
 
             // launch the manufacturing
             waiter.GiveTheOrderToStart();
@@ -37,5 +28,21 @@ namespace Builder
             Console.WriteLine(hamburger);
             Console.Read();
         }
+
+        static Cook CreateCook(BurgerType burgerType)
+        {
+            switch (burgerType)
+            {
+                case BurgerType.BigMac:
+                    return new CookBigMac();
+                case BurgerType.CheeseBurger:
+                    return new CookCheeseBurger();
+                case BurgerType.Mine:
+                    return new MyBurger();
+            }
+            return null;
+        }
     }
+
+
 }

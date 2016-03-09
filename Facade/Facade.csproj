@@ -43,6 +43,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EngineController.cs" />
+    <Compile Include="IEngineController.cs" />
+    <Compile Include="ITachometerController.cs" />
+    <Compile Include="ITractionControlController.cs" />
+    <Compile Include="ITransmissionController.cs" />
+    <Compile Include="IVehicleFacade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TachometerController.cs" />

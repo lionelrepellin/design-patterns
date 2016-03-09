@@ -7,7 +7,7 @@ namespace State
         public Beginner(CounterStrike counterStrike)
         {
             CurrentPoints = 0;
-            Cs = counterStrike;
+            CounterStrike = counterStrike;
             Initialize();
         }
 
@@ -32,7 +32,7 @@ namespace State
         {
             if (CurrentPoints > HighLimit)
             {
-                Cs.Skill = new Intermediate(this);
+                CounterStrike.Skill = new Intermediate(this);
             }
         }
     }
