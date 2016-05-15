@@ -11,12 +11,14 @@ namespace Command
         static void Main(string[] args)
         {
             var bankAccount = new BankAccount(100);
-            
+
             var group = new CommandGroup<AddMoney>();
             group.Add(new AddMoney(bankAccount, 10));
             group.Add(new AddMoney(bankAccount, 10));
             //group.Add(new AddMoney(bankAccount, 10));
-            group.Make(1);
+            group.UnDo();
+            group.UnDo();
+            group.ReDo();
 
             Console.Read();
         }
@@ -53,13 +55,6 @@ namespace Command
         void Do();
 
         void Undo();
-
-        /// ----------------------------------------------------------
-        /// <summary>
-        /// Return true if the current action is undoable.
-        /// </summary>
-        /// ----------------------------------------------------------
-        bool IsUndoable { get; }
     }
 
     /*
@@ -87,15 +82,6 @@ namespace Command
         private decimal _oldValue;
         private BankAccount _bankAccount;
 
-        public bool IsUndoable
-        {
-            get
-            {
-                return true;
-                //throw new NotImplementedException();
-            }
-        }
-
         public AddMoney(BankAccount bankAccount, decimal value)
         {
             _newValue = value;
@@ -116,7 +102,7 @@ namespace Command
     }
 
 
-
+    /*
     public class RemoveMoney : ICommand
     {
         private decimal _newValue;
@@ -150,7 +136,7 @@ namespace Command
             _bankAccount.SetNewAvount(_oldValue);
         }
     }
-
+    */
 
 
     //public class JumpCommand : Command
@@ -219,24 +205,12 @@ namespace Command
         private Stack<T> _commandsDo = new Stack<T>();
         private Stack<T> _commandsUndo = new Stack<T>();
 
+        private int index;
+
         public void Add(T item)
         {
-            this._commandsDo.Push(item);
-        }
-
-        public void Remove(T item)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool CanDo
-        {
-            get { return _commandsUndo.Count > 0; }
-        }
-
-        public bool CanUndo
-        {
-            get { return _commandsDo.Count > 0 && this._commandsDo.Peek().IsUndoable; }
+            _commandsDo.Push(item);
+            item.Do();
         }
 
         public void ClearAll()
@@ -245,6 +219,27 @@ namespace Command
             _commandsUndo.Clear();
         }
 
+        public void UnDo()
+        {
+            if (_commandsDo.Any())
+            {
+                var lastCommand = _commandsDo.Pop();
+                lastCommand.Undo();
+                _commandsUndo.Push(lastCommand);
+            }
+        }
+
+        public void ReDo()
+        {
+            if (_commandsUndo.Any())
+            {
+                var lastUndoCommand = _commandsUndo.Pop();
+                lastUndoCommand.Do();
+                _commandsDo.Push(lastUndoCommand);
+            }
+        }
+
+        /*
         public void Make(int count)
         {
             if (_commandsDo.Count >= count)
@@ -297,5 +292,6 @@ namespace Command
             }
             else throw new InvalidOperationException("Not enougth actions to do");
         }
+        */
     }
 }
