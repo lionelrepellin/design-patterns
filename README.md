@@ -30,6 +30,7 @@ You can see the links below to learn more about design patterns :
 - [Builder](http://en.wikipedia.org/wiki/Builder_pattern)
 - [Chain of Responsability](http://en.wikipedia.org/wiki/Chain-of-responsibility_pattern)
 - [Composite](http://en.wikipedia.org/wiki/Composite_pattern)
+- [Command](https://en.wikipedia.org/wiki/Command_pattern)
 - [Decorator](http://en.wikipedia.org/wiki/Decorator_pattern)
 - [Facade](https://en.wikipedia.org/wiki/Facade_pattern)
 - [Observer](http://en.wikipedia.org/wiki/Observer_pattern)
