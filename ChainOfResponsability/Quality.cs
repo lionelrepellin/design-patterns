@@ -19,7 +19,7 @@ namespace ChainOfResponsability
             {
                 Console.WriteLine(">> You can change your creation");                
             }
-            else if (this.Successor != null)
+            else if (Successor != null)
             {
                 Successor.ProcessRequest();
             }

@@ -13,7 +13,7 @@
 
         public virtual string Display()
         {
-            var result = string.Format("{0} ({1})", _name, this.GetType().Name);
+            var result = string.Format("{0} ({1})", _name, GetType().Name);
             return result.PadLeft(3 * _hierarchyLevel + result.Length);
         }
     }

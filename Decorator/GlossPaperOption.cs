@@ -13,7 +13,7 @@ namespace Decorator
         {
             get
             {
-                return Book.Description + "- with gloss paper => " + this.Book.Price + " + " + this.OptionPrice + " = " + this.Price + " Euros" + Environment.NewLine;
+                return Book.Description + "- with gloss paper => " + Book.Price + " + " + OptionPrice + " = " + Price + " Euros" + Environment.NewLine;
             }
         }
     }

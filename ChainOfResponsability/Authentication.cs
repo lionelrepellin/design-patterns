@@ -19,7 +19,7 @@ namespace ChainOfResponsability
             {
                 Console.WriteLine(">> Bad login or password !");                
             }
-            else if (this.Successor != null)
+            else if (Successor != null)
             {
                 Successor.ProcessRequest();
             }

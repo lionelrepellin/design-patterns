@@ -34,7 +34,7 @@ namespace TemplateMethod
 
         public void Display()
         {
-            Console.WriteLine("[{0}]", this.GetType().FullName);
+            Console.WriteLine("[{0}]", GetType().FullName);
             Console.WriteLine("Excluding taxes amount: {0} Euros", ExcludingTaxes);
             Console.WriteLine("All taxes included amount: {0} Euros", AllTaxesIncluded);
             Console.WriteLine();

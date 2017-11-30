@@ -19,7 +19,7 @@ namespace ChainOfResponsability
             {
                 Console.WriteLine(">> Exit without saving");
             }
-            else if (this.Successor != null)
+            else if (Successor != null)
             {
                 Successor.ProcessRequest();
             }

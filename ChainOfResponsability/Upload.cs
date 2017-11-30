@@ -16,11 +16,11 @@ namespace ChainOfResponsability
         {
             Console.WriteLine("Upload in progress ? {0}", _uploadInProgress);
 
-            if (!_uploadInProgress && this.Successor != null)
+            if (!_uploadInProgress && Successor != null)
             {
                 Successor.ProcessRequest();
             }
-            else if (this.Successor != null)
+            else if (Successor != null)
             {
                 Console.Write(">> Please wait during file transfer");
                 for (var i = 0; i < 20; i++)
