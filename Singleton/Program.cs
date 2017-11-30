@@ -15,7 +15,7 @@ namespace Singleton
             for (var i = 0; i < NumberOfThreads; i++)
             {
                 var thread = new Thread(new ParameterizedThreadStart(Logger.Instance.Write));
-                thread.Start(string.Format("Thread number: {0}", i));
+                thread.Start($"Thread number: {i}");
 
                 threads.Add(thread);
             }

@@ -3,7 +3,7 @@
 namespace Strategy
 {
     class Program
-    {        
+    {
         // set the value to False to change the behaviour
         private const bool IsUserAuthenticated = true;
 
@@ -20,10 +20,10 @@ namespace Strategy
             // save data
             Console.WriteLine();
             service.Save();
-            
+
             Console.Read();
         }
-        
+
         // instantiate the right strategy
         private static IBackupStrategy CreateBackupStrategy(bool userAuthenticated)
         {
@@ -31,10 +31,7 @@ namespace Strategy
             {
                 return new UserAuthenticatedStrategy();
             }
-            else
-            {
-                return new UserNotAuthenticatedStrategy();
-            }
+            return new UserNotAuthenticatedStrategy();
         }
     }
 }

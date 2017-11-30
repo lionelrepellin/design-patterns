@@ -7,13 +7,13 @@ namespace Strategy
     {
         public object Load()
         {
-            Console.WriteLine("[{0}] Load data from an XML file", GetType().Name);
+            Console.WriteLine($"[{GetType().Name}] Load data from an XML file");
             return new object();
         }
 
         public void Save()
         {
-            Console.WriteLine("[{0}] Save data into an XML file", GetType().Name);
+            Console.WriteLine($"[{GetType().Name}] Save data into an XML file");
         }
     }
 }

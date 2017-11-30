@@ -42,7 +42,7 @@ namespace Singleton
         {
             content = (string)content;
 
-            var currentThreadId = string.Format("Current thread Id used: {0}", Thread.CurrentThread.ManagedThreadId);
+            var currentThreadId = string.Format($"Current thread Id used: {Thread.CurrentThread.ManagedThreadId}");
             Console.WriteLine(currentThreadId);
 
             // lock keyword is used to prevent thread concurrency exception

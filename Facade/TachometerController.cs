@@ -20,7 +20,7 @@ namespace Facade
 
         public TachometerController()
         {
-            Limit = 5000;
+            Limit = 6000;
         }
     }
 }

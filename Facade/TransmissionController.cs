@@ -17,7 +17,7 @@ namespace Facade
             if (Gear < MaxGear)
             {
                 Gear++;
-                Console.WriteLine(string.Format("Shifted up to gear {0}", Gear));
+                Console.WriteLine(string.Format($"Shifted up to gear {Gear}"));
             }
         }
 
@@ -26,7 +26,7 @@ namespace Facade
             if (Gear > 0)
             {
                 Gear--;
-                Console.WriteLine(string.Format("Shifted down to gear {0}", Gear));
+                Console.WriteLine(string.Format($"Shifted down to gear {Gear}"));
             }
         }
     }

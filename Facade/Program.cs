@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 //
 // Source: https://visualstudiomagazine.com/articles/2013/06/18/the-facade-pattern-in-net.aspx (Eric Vogel)
 // with some personal improvements ;)
@@ -28,7 +29,7 @@ namespace Facade
             // then accelerate the vehicle from gear rest up to gear six
             for (int i = 0; i < 55; i++)
             {
-                System.Threading.Thread.Sleep(100);
+                Thread.Sleep(100);
                 vehicleFacade.Accelerate();
             }
 
@@ -37,7 +38,7 @@ namespace Facade
             for (var i = 0; i < 4; i++)
             {
                 vehicleFacade.SlowDown();
-                System.Threading.Thread.Sleep(100);
+                Thread.Sleep(100);
             }
 
             Console.WriteLine("{0}So brake until the vehicle stops !{0}", Environment.NewLine);

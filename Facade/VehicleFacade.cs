@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Facade
 {
@@ -67,7 +68,7 @@ namespace Facade
             while (_tachometerController.Rpm > 0)
             {
                 SlowDown();
-                System.Threading.Thread.Sleep(100);
+                Thread.Sleep(100);
             }
         }
 

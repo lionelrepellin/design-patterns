@@ -21,7 +21,7 @@ namespace Proxy
             }
             else
             {
-                Error();
+                Error("Up");
             }
         }
 
@@ -33,15 +33,15 @@ namespace Proxy
             }
             else
             {
-                Error();
+                Error("Down");
             }
         }
 
-        private void Error()
+        private void Error(string actionName)
         {
-            Console.WriteLine("The wind speed is not appropriate for this action.");
-            Console.WriteLine("Wind speed limit: {0} km/h", _anemometer.WindSpeedLimit);
-            Console.WriteLine("Current wind speed: {0} km/h", _anemometer.CurrentWindSpeed);            
+            Console.WriteLine($"The wind speed is not appropriate for the '{actionName}' action.");
+            Console.WriteLine($"Wind speed limit: {_anemometer.WindSpeedLimit} km/h");
+            Console.WriteLine($"Current wind speed: {_anemometer.CurrentWindSpeed} km/h");            
         }
     }
 }

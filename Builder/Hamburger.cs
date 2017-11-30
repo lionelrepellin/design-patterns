@@ -39,7 +39,7 @@
             var saladExists = (_salad) ? "with salad" : "without salad";
             var gherkinExists = (_gherkin) ? "with a gherkin" : "without gherkin";
 
-            return string.Format("The burger is made with {0} steack, with {1} slice of cheese, {2}, {3} and {4}.", _nbSteack, _nbSliceOfCheese, sauceExists, saladExists, gherkinExists);
+            return string.Format($"The burger is made with {_nbSteack} steack, with {_nbSliceOfCheese} slice of cheese, {sauceExists}, {saladExists} and {gherkinExists}.");
         }
     }
 }

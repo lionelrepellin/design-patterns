@@ -17,7 +17,7 @@ namespace Decorator
             get { return Book.Price + OptionPrice; }
         }
 
-        public PhotoBookOptionDecorator(BasePhotoBook book, double optionPrice)
+        protected PhotoBookOptionDecorator(BasePhotoBook book, double optionPrice)
         {
             Book = book;
             OptionPrice = optionPrice;
