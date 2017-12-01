@@ -42,6 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Outputs\Database.cs">
+      <DependentUpon>IOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outputs\IOutput.cs" />
+    <Compile Include="OutputFactory.cs" />
+    <Compile Include="Outputs\JsonFile.cs">
+      <DependentUpon>IOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Outputs\XmlFile.cs">
+      <DependentUpon>IOutput.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
