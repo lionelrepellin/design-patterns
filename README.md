@@ -33,6 +33,7 @@ You can see the links below to learn more about design patterns :
 - [Command](https://en.wikipedia.org/wiki/Command_pattern)
 - [Decorator](http://en.wikipedia.org/wiki/Decorator_pattern)
 - [Facade](https://en.wikipedia.org/wiki/Facade_pattern)
+- [Factory](https://en.wikipedia.org/wiki/Factory_method_pattern)
 - [Observer](http://en.wikipedia.org/wiki/Observer_pattern)
 - [Proxy](http://en.wikipedia.org/wiki/Proxy_pattern)
 - [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)
